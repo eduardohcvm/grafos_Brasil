@@ -5,10 +5,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.ArrayList;
+import java.util.List;
 
+@Data
 public class Vertice {
     private String nome;
+    private List<Vertice> adjacencias;
+    private int grau = 0;
+
+    public Vertice(String nome) {
+        this.nome = nome;
+        adjacencias = new ArrayList<>();
+    }
+    public String toString() {
+        return "Vertice " + nome + " com grau " + grau;
+    }
 }
