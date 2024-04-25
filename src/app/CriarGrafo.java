@@ -1,5 +1,6 @@
 package app;
 
+
 public class CriarGrafo {
     public CriarGrafo(Grafo g) {
 
@@ -62,54 +63,57 @@ public class CriarGrafo {
 
 
         g.adicionarAresta(new Aresta("a1", AC, AM, 1300));
-        g.adicionarAresta(new Aresta("a2", AL, PE, 260));
-        g.adicionarAresta(new Aresta("a3", AL, SE, 270));
-        g.adicionarAresta(new Aresta("a4", AP, PA, 400));
-        g.adicionarAresta(new Aresta("a5", BA, PA, 500));
-        g.adicionarAresta(new Aresta("a6", AM, RO, 800));
-        g.adicionarAresta(new Aresta("a7", AM, RR, 600));
-        g.adicionarAresta(new Aresta("a8", BA, SE, 280));
-        g.adicionarAresta(new Aresta("a9", BA, PE, 800));
-        g.adicionarAresta(new Aresta("a10", BA, PI, 1000));
-        g.adicionarAresta(new Aresta("a11", BA, MG, 1400));
-        g.adicionarAresta(new Aresta("a12", BA, ES, 1200));
-        g.adicionarAresta(new Aresta("a13", CE, PI, 600));
-        g.adicionarAresta(new Aresta("a14", CE, PE, 800));
-        g.adicionarAresta(new Aresta("a15", ES, MG, 520));
-
-        g.adicionarAresta(new Aresta("a17", ES, RJ, 490));
-        g.adicionarAresta(new Aresta("a18", GO, BA, 1500));
-        g.adicionarAresta(new Aresta("a19", GO, MG, 930));
-        g.adicionarAresta(new Aresta("a20", GO, MT, 720));
-        g.adicionarAresta(new Aresta("a21", GO, TO, 880));
-        g.adicionarAresta(new Aresta("a22", GO, DF, 210));
-        g.adicionarAresta(new Aresta("a23", MA, TO, 850));
-        g.adicionarAresta(new Aresta("a24", MA, PI, 640));
-        g.adicionarAresta(new Aresta("a25", MT, TO, 1400));
-
-        g.adicionarAresta(new Aresta("a27", MS, GO, 1100));
-        g.adicionarAresta(new Aresta("a28", MS, MT, 980));
-        g.adicionarAresta(new Aresta("a29", MG, RJ, 340));
-        g.adicionarAresta(new Aresta("a30", MG, SP, 580));
-        g.adicionarAresta(new Aresta("a31", MG, MS, 1400));
-        g.adicionarAresta(new Aresta("a32", MG, DF, 720));
-        g.adicionarAresta(new Aresta("a33", PA, AM, 1600));
-        g.adicionarAresta(new Aresta("a34", PB, RN, 180));
-        g.adicionarAresta(new Aresta("a35", PB, PE, 120));
-        g.adicionarAresta(new Aresta("a36", PB, CE, 730));
-        g.adicionarAresta(new Aresta("a37", PR, SP, 400));
-        g.adicionarAresta(new Aresta("a38", PR, MS, 900));
-
-        g.adicionarAresta(new Aresta("a39", RJ, SP, 430));
-        g.adicionarAresta(new Aresta("a40", RN, CE, 520));
-        g.adicionarAresta(new Aresta("a41", RS, SC, 480));
-        g.adicionarAresta(new Aresta("a42", SC, PR, 300));
-        g.adicionarAresta(new Aresta("a43", SP, MS, 1000));
-        g.adicionarAresta(new Aresta("a44", TO, PI, 800));
-        g.adicionarAresta(new Aresta("a45", TO, BA, 1500));
-
-
+        g.adicionarAresta(new Aresta("a2", AC, RO, 260));
+        g.adicionarAresta(new Aresta("a3", AL, BA, 270));
+        g.adicionarAresta(new Aresta("a4", AL, PE, 400));
+        g.adicionarAresta(new Aresta("a5", AL, SE, 500));
+        g.adicionarAresta(new Aresta("a6", AP, PA, 800));
+        g.adicionarAresta(new Aresta("a7", AM, MT, 600));
+        g.adicionarAresta(new Aresta("a8", AM, PA, 280));
+        g.adicionarAresta(new Aresta("a9", AM, RO, 800));
+        g.adicionarAresta(new Aresta("a10", AM, RR, 1000));
+        g.adicionarAresta(new Aresta("a11", BA, ES, 1400));
+        g.adicionarAresta(new Aresta("a12", BA, PE, 1200));
+        g.adicionarAresta(new Aresta("a13", BA, PI, 600));
+        g.adicionarAresta(new Aresta("a14", BA, TO, 800));
+        g.adicionarAresta(new Aresta("a15", BA, GO, 520));
+        g.adicionarAresta(new Aresta("a16", BA, MG, 1400));
+        g.adicionarAresta(new Aresta("a17", BA, SE, 490));
+        g.adicionarAresta(new Aresta("a18", CE, PB, 1500));
+        g.adicionarAresta(new Aresta("a19", CE, PE, 930));
+        g.adicionarAresta(new Aresta("a20", CE, PI, 720));
+        g.adicionarAresta(new Aresta("a21", CE, RN, 880));
+        g.adicionarAresta(new Aresta("a22", DF, GO, 210));
+        g.adicionarAresta(new Aresta("a23", DF, MG, 850));
+        g.adicionarAresta(new Aresta("a24", ES, MG, 640));
+        g.adicionarAresta(new Aresta("a25", ES, RJ, 1400));
+        g.adicionarAresta(new Aresta("a26", GO, MT, 1400));
+        g.adicionarAresta(new Aresta("a27", GO, MS, 1100));
+        g.adicionarAresta(new Aresta("a28", GO, MG, 980));
+        g.adicionarAresta(new Aresta("a29", GO, TO, 340));
+        g.adicionarAresta(new Aresta("a30", MA, PA, 580));
+        g.adicionarAresta(new Aresta("a31", MA, PI, 1400));
+        g.adicionarAresta(new Aresta("a32", MA, TO, 720));
+        g.adicionarAresta(new Aresta("a33", MT, MS, 1600));
+        g.adicionarAresta(new Aresta("a34", MT, PA, 180));
+        g.adicionarAresta(new Aresta("a35", MT, RO, 120));
+        g.adicionarAresta(new Aresta("a36", MT, TO, 730));
+        g.adicionarAresta(new Aresta("a37", MS, MG, 400));
+        g.adicionarAresta(new Aresta("a38", MS, PA, 900));
+        g.adicionarAresta(new Aresta("a39", MS, SP, 430));
+        g.adicionarAresta(new Aresta("a40", MG, RJ, 520));
+        g.adicionarAresta(new Aresta("a41", MG, SP, 480));
+        g.adicionarAresta(new Aresta("a42", PA, RR, 300));
+        g.adicionarAresta(new Aresta("a43", PA, TO, 1000));
+        g.adicionarAresta(new Aresta("a44", PB, PE, 800));
+        g.adicionarAresta(new Aresta("a45", PB, RN, 1500));
+        g.adicionarAresta(new Aresta("a46", PR, SC, 1500));
+        g.adicionarAresta(new Aresta("a47", PR, SP, 1500));
+        g.adicionarAresta(new Aresta("a48", PE, PI, 1500));
+        g.adicionarAresta(new Aresta("a49", PE, RN, 1500));
+        g.adicionarAresta(new Aresta("a50", PI, TO, 1500));
+        g.adicionarAresta(new Aresta("a51", RJ, SP, 1500));
+        g.adicionarAresta(new Aresta("a52", RS, SC, 1500));
     }
-
 
 }
