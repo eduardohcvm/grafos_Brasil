@@ -11,8 +11,9 @@ public class Aresta {
     private String nome;
     private Vertice origem;
     private Vertice destino;
+    private int distancia;
 
     public String toString() {
-        return "Aresta " + (nome.isEmpty() ? ":" : nome + ": ") + "("+ origem.getNome()+ ", " + destino.getNome() + ")";
+        return "Aresta " + (nome.isEmpty() ? ":" : nome + ": ") + "("+ origem.getNome()+ ", " + destino.getNome() + ", " + distancia + ")";
     }
 }
