@@ -2,6 +2,7 @@ package app;
 
 public class CriarGrafo {
     public CriarGrafo(Grafo g) {
+
         Vertice AC = new Vertice("AC");
         Vertice AL = new Vertice("AL");
         Vertice AM = new Vertice("AM");
@@ -30,7 +31,7 @@ public class CriarGrafo {
         Vertice SP = new Vertice("SP");
         Vertice TO = new Vertice("TO");
 
-        // Adicionando os vértices ao grafo
+
         g.adicionarVertice(AC);
         g.adicionarVertice(AL);
         g.adicionarVertice(AM);
@@ -85,6 +86,28 @@ public class CriarGrafo {
         g.adicionarAresta(new Aresta("a23", MA, TO, 850));
         g.adicionarAresta(new Aresta("a24", MA, PI, 640));
         g.adicionarAresta(new Aresta("a25", MT, TO, 1400));
+
+        g.adicionarAresta(new Aresta("a27", MS, GO, 1100));
+        g.adicionarAresta(new Aresta("a28", MS, MT, 980));
+        g.adicionarAresta(new Aresta("a29", MG, RJ, 340));
+        g.adicionarAresta(new Aresta("a30", MG, SP, 580));
+        g.adicionarAresta(new Aresta("a31", MG, MS, 1400));
+        g.adicionarAresta(new Aresta("a32", MG, DF, 720));
+        g.adicionarAresta(new Aresta("a33", PA, AM, 1600));
+        g.adicionarAresta(new Aresta("a34", PB, RN, 180));
+        g.adicionarAresta(new Aresta("a35", PB, PE, 120));
+        g.adicionarAresta(new Aresta("a36", PB, CE, 730));
+        g.adicionarAresta(new Aresta("a37", PR, SP, 400));
+        g.adicionarAresta(new Aresta("a38", PR, MS, 900));
+
+        g.adicionarAresta(new Aresta("a39", RJ, SP, 430));
+        g.adicionarAresta(new Aresta("a40", RN, CE, 520));
+        g.adicionarAresta(new Aresta("a41", RS, SC, 480));
+        g.adicionarAresta(new Aresta("a42", SC, PR, 300));
+        g.adicionarAresta(new Aresta("a43", SP, MS, 1000));
+        g.adicionarAresta(new Aresta("a44", TO, PI, 800));
+        g.adicionarAresta(new Aresta("a45", TO, BA, 1500));
+
 
     }
 
