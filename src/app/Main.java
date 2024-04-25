@@ -8,6 +8,7 @@ public class Main {
         g.verificaAdjacencias();
         g.printaMatrizAdjacencias();
         g.printaMatrizIncidencia();
+
         System.out.println(g);
     }
 

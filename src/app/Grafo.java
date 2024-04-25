@@ -152,6 +152,11 @@ public class Grafo {
         }
         System.out.printf(matriz.toString());
     }
+    public int getDistanciaEstados(Vertice inicio, Vertice fim){
+        int distanciaFinal = 0;
+
+        return distanciaFinal;
+    }
 
     public String toString() {
 

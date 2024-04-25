@@ -99,7 +99,7 @@ public class CriarGrafo {
         g.adicionarAresta(new Aresta("a35", MT, RO, 120));
         g.adicionarAresta(new Aresta("a36", MT, TO, 730));
         g.adicionarAresta(new Aresta("a37", MS, MG, 400));
-        g.adicionarAresta(new Aresta("a38", MS, PA, 900));
+        g.adicionarAresta(new Aresta("a38", RS, SC, 1500));
         g.adicionarAresta(new Aresta("a39", MS, SP, 430));
         g.adicionarAresta(new Aresta("a40", MG, RJ, 520));
         g.adicionarAresta(new Aresta("a41", MG, SP, 480));
@@ -113,7 +113,7 @@ public class CriarGrafo {
         g.adicionarAresta(new Aresta("a49", PE, RN, 1500));
         g.adicionarAresta(new Aresta("a50", PI, TO, 1500));
         g.adicionarAresta(new Aresta("a51", RJ, SP, 1500));
-        g.adicionarAresta(new Aresta("a52", RS, SC, 1500));
+
     }
 
 }
