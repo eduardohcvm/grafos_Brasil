@@ -10,6 +10,7 @@ public class Main {
         g.printaMatrizIncidencia();
 
         System.out.println(g);
+
     }
 
 

@@ -2,12 +2,8 @@ package app;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Data
 @AllArgsConstructor
@@ -152,8 +148,64 @@ public class Grafo {
         }
         System.out.printf(matriz.toString());
     }
-    public int getDistanciaEstados(Vertice inicio, Vertice fim){
-        int distanciaFinal = 0;
+    public int getDistanciaMinimaEstados(Vertice inicio, Vertice fim) {
+        if (!vertices.contains(inicio) || !vertices.contains(fim)) {
+            System.out.println("Um dos vértices não existe no grafo!");
+            return -1;
+        }
+
+        PriorityQueue<Aresta> pq = new PriorityQueue<>((a1, a2) -> a1.getDistancia() - a2.getDistancia());
+        Set<Vertice> visitados = new HashSet<>();
+        Map<Vertice, Aresta> predecessor = new HashMap<>();
+        Map<Vertice, Integer> distancia = new HashMap<>();
+
+        // Inicializar distância de todos os vértices como infinito
+        for (Vertice vertice : vertices) {
+            distancia.put(vertice, Integer.MAX_VALUE);
+        }
+
+        // Inicializar distância do vértice de início como 0
+        distancia.put(inicio, 0);
+
+        // Adicionar todas as arestas ao heap
+        for (Aresta aresta : arestas) {
+            pq.add(aresta);
+        }
+
+        // Enquanto houverem arestas no heap
+        while (!pq.isEmpty()) {
+            Aresta aresta = pq.poll();
+            Vertice vertice1 = aresta.getOrigem();
+            Vertice vertice2 = aresta.getDestino();
+
+            // Verificar se os vértices já foram visitados
+            if (visitados.contains(vertice1) || visitados.contains(vertice2)) {
+                continue;
+            }
+
+            // Atualizar a distância dos vértices
+            // Atualizar a distância dos vértices
+            int novaDistancia1 = distancia.get(vertice1) + aresta.getDistancia();
+            int novaDistancia2 = distancia.get(vertice2) + aresta.getDistancia();
+
+            distancia.put(vertice1, Math.min(distancia.get(vertice1), novaDistancia1));
+            distancia.put(vertice2, Math.min(distancia.get(vertice2), novaDistancia2));
+
+            predecessor.put(vertice1, aresta);
+            predecessor.put(vertice2, aresta);
+
+            // Marcar os vértices como visitados
+            visitados.add(vertice1);
+            visitados.add(vertice2);
+
+            // Verificar se a distância do vértice de fim foi atualizada
+            if (visitados.contains(fim)) {
+                break;
+            }
+        }
+
+        // Calcular a distância final
+        int distanciaFinal = distancia.get(fim);
 
         return distanciaFinal;
     }
