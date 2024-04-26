@@ -154,7 +154,7 @@ public class Grafo {
             return -1;
         }
 
-        PriorityQueue<Aresta> pq = new PriorityQueue<>(Comparator.comparingInt(Aresta::getDistancia));
+        PriorityQueue<Aresta> pq = new PriorityQueue<>((a1, a2) -> a1.getDistancia() - a2.getDistancia());
         Set<Vertice> visitados = new HashSet<>();
         Map<Vertice, Aresta> predecessor = new HashMap<>();
         Map<Vertice, Integer> distancia = new HashMap<>();
