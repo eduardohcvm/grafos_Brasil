@@ -98,6 +98,7 @@ public class Grafo {
                 Vertice origem = aresta.getOrigem(); //A
                 Vertice destino = aresta.getDestino(); //C
                 origem.getAdjacencias().add(destino); //add C à lista de A
+                destino.getAdjacentes().add(origem);
                 matrizAdjacencia[verticesIndices.get(origem.getNome())][verticesIndices.get(destino.getNome())] = 1;
                 //matrizAdjacencia[0][2] = 1
                 destino.getAdjacencias().add(origem); //add A à lista de C
@@ -245,6 +246,18 @@ public class Grafo {
         }
 
         return verticeMaiorGrau;
+    }
+
+    public Boolean temCaminhoSimples(Vertice origem, Vertice destino) {
+        if (origem == destino) return true;
+        List<Vertice> visitados = new ArrayList<>();
+        visitados.add(origem);
+        for (Vertice v : origem.getAdjacentes()) {
+            if (v == destino && !visitados.contains(v)) return true;
+            else visitados.add(v);
+        }
+
+        return false;
     }
 
 }
