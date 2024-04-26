@@ -214,15 +214,37 @@ public class Grafo {
 
         return "Grafo " +
                 (eDirecionado ? "direcionado" : "não direcionado") +
-                " com " +
+                ", pois não importa o sentido da distância entre dois estados, de ordem " +
                 ordem +
-                " vértices e " +
+                " e tamanho " +
                 tamanho +
-                " arestas:\n" +
-                "Vértices:\n" +
+                ".\n" +
+                "Vértice de Maior Grau:\n" +
+                encontrarVerticeMaiorGrau() +
+                "\nVértices:\n" +
                 vertices +
                 "\nArestas:\n" +
                 arestas;
+    }
+
+    public Vertice encontrarVerticeMaiorGrau() {
+        int maiorGrau = 0;
+        Vertice verticeMaiorGrau = null;
+
+        for (Vertice vertice : vertices) {
+            int grauVertice = 0;
+            for (Vertice adjacente : vertice.getAdjacencias()) {
+                grauVertice++;
+            }
+            vertice.setGrau(grauVertice);
+
+            if (grauVertice > maiorGrau) {
+                maiorGrau = grauVertice;
+                verticeMaiorGrau = vertice;
+            }
+        }
+
+        return verticeMaiorGrau;
     }
 
 }

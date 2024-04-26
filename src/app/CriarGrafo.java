@@ -114,7 +114,7 @@ public class CriarGrafo {
         g.adicionarAresta(new Aresta("a50", PI, TO, 1401));
         g.adicionarAresta(new Aresta("a51", RJ, SP, 429));
 
-        System.out.println(g.getDistanciaMinimaEstados(PB, TO));
+        System.out.println(g.encontrarMenorDistancia(PB, TO));
 
     }
 
