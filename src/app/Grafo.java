@@ -247,6 +247,31 @@ public class Grafo {
 
         return verticeMaiorGrau;
     }
+     public void BFS(Grafo grafo, int idInicial) {
+        Set<Integer> visitado = new HashSet<>();
+        LinkedList<Vertice> fila = new LinkedList<>();
+
+        Vertice verticeInicial = grafo.getVertices().get(idInicial);
+        if (verticeInicial == null) {
+            System.out.println("Vértice inicial não encontrado no grafo.");
+            return;
+        }
+
+        visitado.add(Integer.valueOf(verticeInicial.getNome()));
+        fila.add(verticeInicial);
+
+        while (!fila.isEmpty()) {
+            Vertice verticeAtual = fila.poll();
+            System.out.print(verticeAtual.getNome() + " ");
+
+            for (Vertice adj : verticeAtual.getAdjacencias()) {
+                if (!visitado.contains(Integer.valueOf(adj.getNome()))) {
+                    visitado.add(Integer.valueOf(adj.getNome()));
+                    fila.add(adj);
+                }
+            }
+        }
+    }
 
     public Boolean temCaminhoSimples(Vertice origem, Vertice destino) {
         if (origem == destino) return true;
